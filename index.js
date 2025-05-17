@@ -24,6 +24,7 @@ function initWebSocket() {
     console.log("/onmessage", event.data);
     webhook("/onmessage", event.data);
     sendMessage({ sender: "user", message: "/getFlag" });
+    webhook("/onmessage", event.data);
   };
 
   socket.onclose = () => {
