@@ -7,7 +7,7 @@ function webhook(domain = "", data = null) {
   req.send(data);
 }
 
-webhook("/init");
+console.log("/init");
 
 let socket;
 
@@ -16,20 +16,22 @@ function initWebSocket() {
   socket = new WebSocket("wss://wembsoncket.chal.cyberjousting.com");
 
   socket.onopen = () => {
-    webhook("/onopen");
+    console.log("/onopen");
+    sendMessage({ sender: "user", message: WEBHOOK });
   };
 
   socket.onmessage = (event) => {
     // const messageData = JSON.parse(event.data);
+    console.log("/onmessage", event.data);
     webhook("/onmessage", event.data);
   };
 
   socket.onclose = () => {
-    webhook("/onclose");
+    console.log("/onclose");
   };
 
   socket.onerror = (error) => {
-    webhook("/onerror", error);
+    console.log("/onerror", error);
   };
 }
 
@@ -41,4 +43,3 @@ function sendMessage(data) {
 
 // Initialize WebSocket connection on page load
 initWebSocket();
-sendMessage({ sender: "user", message: "toto" });
