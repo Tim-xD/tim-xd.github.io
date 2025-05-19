@@ -1,6 +1,6 @@
 import string
 
-prefix = "ruW-tjL1BWCdhbiOS"
+prefix = "ruW-tjL1BWCdhbiOSC"
 css = ""
 
 for c in string.printable:
