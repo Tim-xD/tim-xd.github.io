@@ -1,6 +1,6 @@
 import string
 
-prefix = "ru"
+prefix = "ruW"
 css = ""
 
 for c in filter(str.isalnum, string.printable):
