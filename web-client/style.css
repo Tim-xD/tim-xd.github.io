@@ -1,0 +1,248 @@
+
+[name="foo"][value^="0"] {
+    --value: url("https://toto.requestcatcher.com/0")
+}
+
+[name="foo"][value^="1"] {
+    --value: url("https://toto.requestcatcher.com/1")
+}
+
+[name="foo"][value^="2"] {
+    --value: url("https://toto.requestcatcher.com/2")
+}
+
+[name="foo"][value^="3"] {
+    --value: url("https://toto.requestcatcher.com/3")
+}
+
+[name="foo"][value^="4"] {
+    --value: url("https://toto.requestcatcher.com/4")
+}
+
+[name="foo"][value^="5"] {
+    --value: url("https://toto.requestcatcher.com/5")
+}
+
+[name="foo"][value^="6"] {
+    --value: url("https://toto.requestcatcher.com/6")
+}
+
+[name="foo"][value^="7"] {
+    --value: url("https://toto.requestcatcher.com/7")
+}
+
+[name="foo"][value^="8"] {
+    --value: url("https://toto.requestcatcher.com/8")
+}
+
+[name="foo"][value^="9"] {
+    --value: url("https://toto.requestcatcher.com/9")
+}
+
+[name="foo"][value^="a"] {
+    --value: url("https://toto.requestcatcher.com/a")
+}
+
+[name="foo"][value^="b"] {
+    --value: url("https://toto.requestcatcher.com/b")
+}
+
+[name="foo"][value^="c"] {
+    --value: url("https://toto.requestcatcher.com/c")
+}
+
+[name="foo"][value^="d"] {
+    --value: url("https://toto.requestcatcher.com/d")
+}
+
+[name="foo"][value^="e"] {
+    --value: url("https://toto.requestcatcher.com/e")
+}
+
+[name="foo"][value^="f"] {
+    --value: url("https://toto.requestcatcher.com/f")
+}
+
+[name="foo"][value^="g"] {
+    --value: url("https://toto.requestcatcher.com/g")
+}
+
+[name="foo"][value^="h"] {
+    --value: url("https://toto.requestcatcher.com/h")
+}
+
+[name="foo"][value^="i"] {
+    --value: url("https://toto.requestcatcher.com/i")
+}
+
+[name="foo"][value^="j"] {
+    --value: url("https://toto.requestcatcher.com/j")
+}
+
+[name="foo"][value^="k"] {
+    --value: url("https://toto.requestcatcher.com/k")
+}
+
+[name="foo"][value^="l"] {
+    --value: url("https://toto.requestcatcher.com/l")
+}
+
+[name="foo"][value^="m"] {
+    --value: url("https://toto.requestcatcher.com/m")
+}
+
+[name="foo"][value^="n"] {
+    --value: url("https://toto.requestcatcher.com/n")
+}
+
+[name="foo"][value^="o"] {
+    --value: url("https://toto.requestcatcher.com/o")
+}
+
+[name="foo"][value^="p"] {
+    --value: url("https://toto.requestcatcher.com/p")
+}
+
+[name="foo"][value^="q"] {
+    --value: url("https://toto.requestcatcher.com/q")
+}
+
+[name="foo"][value^="r"] {
+    --value: url("https://toto.requestcatcher.com/r")
+}
+
+[name="foo"][value^="s"] {
+    --value: url("https://toto.requestcatcher.com/s")
+}
+
+[name="foo"][value^="t"] {
+    --value: url("https://toto.requestcatcher.com/t")
+}
+
+[name="foo"][value^="u"] {
+    --value: url("https://toto.requestcatcher.com/u")
+}
+
+[name="foo"][value^="v"] {
+    --value: url("https://toto.requestcatcher.com/v")
+}
+
+[name="foo"][value^="w"] {
+    --value: url("https://toto.requestcatcher.com/w")
+}
+
+[name="foo"][value^="x"] {
+    --value: url("https://toto.requestcatcher.com/x")
+}
+
+[name="foo"][value^="y"] {
+    --value: url("https://toto.requestcatcher.com/y")
+}
+
+[name="foo"][value^="z"] {
+    --value: url("https://toto.requestcatcher.com/z")
+}
+
+[name="foo"][value^="A"] {
+    --value: url("https://toto.requestcatcher.com/A")
+}
+
+[name="foo"][value^="B"] {
+    --value: url("https://toto.requestcatcher.com/B")
+}
+
+[name="foo"][value^="C"] {
+    --value: url("https://toto.requestcatcher.com/C")
+}
+
+[name="foo"][value^="D"] {
+    --value: url("https://toto.requestcatcher.com/D")
+}
+
+[name="foo"][value^="E"] {
+    --value: url("https://toto.requestcatcher.com/E")
+}
+
+[name="foo"][value^="F"] {
+    --value: url("https://toto.requestcatcher.com/F")
+}
+
+[name="foo"][value^="G"] {
+    --value: url("https://toto.requestcatcher.com/G")
+}
+
+[name="foo"][value^="H"] {
+    --value: url("https://toto.requestcatcher.com/H")
+}
+
+[name="foo"][value^="I"] {
+    --value: url("https://toto.requestcatcher.com/I")
+}
+
+[name="foo"][value^="J"] {
+    --value: url("https://toto.requestcatcher.com/J")
+}
+
+[name="foo"][value^="K"] {
+    --value: url("https://toto.requestcatcher.com/K")
+}
+
+[name="foo"][value^="L"] {
+    --value: url("https://toto.requestcatcher.com/L")
+}
+
+[name="foo"][value^="M"] {
+    --value: url("https://toto.requestcatcher.com/M")
+}
+
+[name="foo"][value^="N"] {
+    --value: url("https://toto.requestcatcher.com/N")
+}
+
+[name="foo"][value^="O"] {
+    --value: url("https://toto.requestcatcher.com/O")
+}
+
+[name="foo"][value^="P"] {
+    --value: url("https://toto.requestcatcher.com/P")
+}
+
+[name="foo"][value^="Q"] {
+    --value: url("https://toto.requestcatcher.com/Q")
+}
+
+[name="foo"][value^="R"] {
+    --value: url("https://toto.requestcatcher.com/R")
+}
+
+[name="foo"][value^="S"] {
+    --value: url("https://toto.requestcatcher.com/S")
+}
+
+[name="foo"][value^="T"] {
+    --value: url("https://toto.requestcatcher.com/T")
+}
+
+[name="foo"][value^="U"] {
+    --value: url("https://toto.requestcatcher.com/U")
+}
+
+[name="foo"][value^="V"] {
+    --value: url("https://toto.requestcatcher.com/V")
+}
+
+[name="foo"][value^="W"] {
+    --value: url("https://toto.requestcatcher.com/W")
+}
+
+[name="foo"][value^="X"] {
+    --value: url("https://toto.requestcatcher.com/X")
+}
+
+[name="foo"][value^="Y"] {
+    --value: url("https://toto.requestcatcher.com/Y")
+}
+
+[name="foo"][value^="Z"] {
+    --value: url("https://toto.requestcatcher.com/Z")
+}
