@@ -16,8 +16,7 @@ function post(url, data) {
 }
 
 try {
-  if (window.opener) post(WEBHOOK, window.opener);
-  else get(WEBHOOK);
+  window.open(WEBHOOK + "?open");
 } catch (error) {
   post(WEBHOOK, `Error: ${error}`);
 }
