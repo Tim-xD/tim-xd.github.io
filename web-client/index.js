@@ -17,8 +17,8 @@ function post(url, data) {
 }
 
 function imgEnd() {
-  window.location = WEBHOOK;
-  window.location = PROFILE;
+  document.location = WEBHOOK;
+  document.location = PROFILE;
 }
 
 // const queryString = window.location.search;
