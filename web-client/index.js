@@ -18,7 +18,7 @@ function post(url, data) {
 
 function imgEnd() {
   get(WEBHOOK + "?end");
-  document.location = PROFILE;
+  document.location = WEBHOOK;
 }
 
 // const queryString = window.location.search;
