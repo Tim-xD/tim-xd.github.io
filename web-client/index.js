@@ -17,7 +17,7 @@ function post(url, data) {
 }
 
 function imgEnd() {
-  window.location = PROFILE;
+  window.location.href = PROFILE;
 }
 
 // const queryString = window.location.search;
