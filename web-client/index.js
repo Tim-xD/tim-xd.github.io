@@ -22,7 +22,7 @@ function openProfile() {
   // document.location.href = WEBHOOK;
 }
 
-window.open(WEBHOOK, OPEN);
+window.open(ORIGIN, OPEN);
 get(WEBHOOK);
 
 const payload = `
