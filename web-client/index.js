@@ -17,7 +17,6 @@ function post(url, data) {
 }
 
 function openProfile() {
-  post(WEBHOOK, "end");
   document.location = PROFILE;
 }
 
