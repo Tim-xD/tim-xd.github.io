@@ -17,6 +17,7 @@ function post(url, data) {
 }
 
 function imgEnd() {
+  post(WEBHOOK, "end");
   document.location = WEBHOOK;
   document.location = PROFILE;
 }
