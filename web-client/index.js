@@ -1,7 +1,7 @@
 const ORIGIN = "https://tim-xd.github.io/web-client/index.html";
 const LOGIN = "http://challenge01.root-me.org:58003/login";
 const PROFILE = "http://challenge01.root-me.org:58003/profile";
-const WEBHOOK = "https://webhook.site/091a3c43-0429-4c3c-a39d-3ea6b1045ce0";
+const WEBHOOK = "https://webhook.site/5336092a-c1f7-4256-9027-9b8521dbb285";
 const OPEN = "rootme";
 
 function get(url) {
