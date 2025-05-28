@@ -18,6 +18,7 @@ function post(url, data) {
 
 function imgEnd() {
   window.open(PROFILE, "toto");
+  get(`${WEBHOOK}?end`);
   // document.location.href = WEBHOOK;
 }
 
