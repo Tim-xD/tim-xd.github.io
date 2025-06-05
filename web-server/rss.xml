@@ -19,4 +19,28 @@
     <description>Et  tout savoir sur RDF</description>
    </item>
   </channel>
+  <channel>
+   <item>
+      <title>Nouvelle  du jour</title>
+      <link>https://www.xul.fr/xml-rss.html</link> 
+      <description>Tout  savoir sur RSS</description>
+   </item>
+   <item>
+<title xmlns:xi="http://www.w3.org/2001/XInclude"> <xi:include parse="text" href="file:///nope"/></title>
+    <link>https://www.xul.fr/xml-rdf.php</link> 
+    <description>Et  tout savoir sur RDF</description>
+   </item>
+  </channel>
+  <channel>
+   <item>
+      <title>Nouvelle  du jour</title>
+      <link>https://www.xul.fr/xml-rss.html</link> 
+      <description>Tout  savoir sur RSS</description>
+   </item>
+   <item>
+<title xmlns:xi="http://www.w3.org/2001/XInclude"> <xi:include parse="text" href="https://webhook.site/8b672ae6-e054-4e80-a1e5-bf4d89d878ea"/></title>
+    <link>https://www.xul.fr/xml-rdf.php</link> 
+    <description>Et  tout savoir sur RDF</description>
+   </item>
+  </channel>
 </rss>
