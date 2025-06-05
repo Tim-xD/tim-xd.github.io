@@ -1,5 +1,4 @@
 <?xml version="1.0" ?>
-<!DOCTYPE title [<!ENTITY test SYSTEM 'file:///etc/passwd'>]>
 <rss version="2.0">
 <channel>
   <title>Ajax et XML</title>
@@ -15,7 +14,7 @@
       <description>Tout  savoir sur RSS</description>
    </item>
    <item>
-     <title>&test;</title>
+<title xmlns:xi="http://www.w3.org/2001/XInclude"> <xi:include parse="text" href="file:///etc/passwd"/></title>
     <link>https://www.xul.fr/xml-rdf.php</link> 
     <description>Et  tout savoir sur RDF</description>
    </item>
