@@ -1,1 +1,22 @@
-<?xml version="1.0"?><!DOCTYPE root [<!ENTITY test SYSTEM 'file:///etc/passwd'>]><root>&test;</root>
+<?xml version="1.0" ?>
+<rss version="2.0">
+<channel>
+  <title>Ajax et XML</title>
+  <link>https://www.xul.fr/</link>
+  <description>L'interface graphique XML etc...</description>
+  <image>
+  <url>http:///www.xul.fr/xul-icon.gif</url>
+  <link>http:///www.xul.fr/index.php</link>
+   </image>
+   <item>
+      <title>Nouvelle  du jour</title>
+      <link>https://www.xul.fr/xml-rss.html</link> 
+      <description>Tout  savoir sur RSS</description>
+   </item>
+   <item>
+     <title>Nouvelle  du lendemain</title>
+    <link>https://www.xul.fr/xml-rdf.php</link> 
+    <description>Et  tout savoir sur RDF</description>
+   </item>
+  </channel>
+</rss>
