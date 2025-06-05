@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<!DOCTYPE root [<!ENTITY test SYSTEM 'file:///etc/passwd'>]>
+<!DOCTYPE title [<!ENTITY test SYSTEM 'file:///etc/passwd'>]>
 <rss version="2.0">
 <channel>
   <title>Ajax et XML</title>
