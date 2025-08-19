@@ -2,6 +2,7 @@
 title: SekaiBank Signature
 summary: Welcome to the Sekai Bank challenge!
 tags: [SekaiCTF, Reverse, APK]
+date: 2025-08-18
 ---
 
 ## Description
@@ -20,7 +21,7 @@ The goal of this challenge is to reverse engineer an APK to retrieve a hidden fl
 I began by using Jadx to decompile the APK and retrieve the source code.
 
 ```sh
-jadx SekaiBank.apk
+$ jadx SekaiBank.apk
 ````
 
 Next, I searched for the string `flag` across the decompiled files, which led me to an interesting file.

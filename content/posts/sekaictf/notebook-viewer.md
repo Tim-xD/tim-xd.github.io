@@ -2,6 +2,7 @@
 title: Notebook Viewer
 summary: Miku created this notebook, can you extract its secrets?
 tags: [SekaiCTF, Web, Timing Attack]
+date: 2025-08-18
 ---
 
 ## Description

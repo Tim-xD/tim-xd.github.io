@@ -1,12 +1,20 @@
 languageCode: en-us
 title: CTF Writeups
 
-theme: ["PaperMod"]
+theme: [PaperMod]
 
 # https://gohugo.io/host-and-deploy/host-on-github-pages/#step-5
 caches:
   images:
     dir: :cacheDir/images
+
+mainsections: [posts, papermod]
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON # Necessary for search
 
 languages:
   en:
@@ -20,32 +28,31 @@ languages:
       main:
         - name: Writeups
           identifier: writeups
-          url: writeups/
+          url: /writeups
           weight: 10
         - name: Search
           identifier: search
-          url: search/
+          url: /search
           weight: 20
         - name: Tags
           identifier: tags
-          url: tags/
+          url: /tags
           weight: 30
 
 params:
-  mainSections:
-    - writeups
-
+  # https://adityatelange.github.io/hugo-PaperMod/posts/papermod/papermod-faq/#using-hugos-syntax-highlighter-chroma
   assets:
     disableHLJS: true
 
-  homeInfoParams:
-    Title: My CTF Writeups
-    Content: >
-      🚩 Welcome to my CTF writeups collection!
+  profileMode:
+    enabled: true
+    title: Tim's CTF Writeups
+    subtitle: >
+      🚩 Member of team [HDFR_](https://ctftime.org/team/384849), one of the top 4 French CTFtime teams.
 
-      - Here are the writeups for the CTF challenges I solved.
-
-      - I'm currently a member of team [HDFR_](https://ctftime.org/team/384849), one of the top 4 French CTF teams as of this writing.
+    buttons:
+      - name: Writeups
+        url: /writeups
 
   socialIcons:
     - name: ctftime
@@ -55,9 +62,6 @@ params:
 
 markup:
   highlight:
-    # anchorLineNos: true
-    codeFences: true
+    style: catppuccin-mocha
     guessSyntax: true
     lineNos: true
-    # noClasses: false
-    style: catppuccin-mocha
