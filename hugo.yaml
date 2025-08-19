@@ -1,9 +1,63 @@
-# baseURL: https://example.org/
 languageCode: en-us
 title: CTF Writeups
 
 theme: ["PaperMod"]
 
+# https://gohugo.io/host-and-deploy/host-on-github-pages/#step-5
 caches:
   images:
     dir: :cacheDir/images
+
+languages:
+  en:
+    languageName: "English"
+    weight: 1
+    taxonomies:
+      category: categories
+      tag: tags
+      series: series
+    menu:
+      main:
+        - name: Writeups
+          identifier: writeups
+          url: writeups/
+          weight: 10
+        - name: Search
+          identifier: search
+          url: search/
+          weight: 20
+        - name: Tags
+          identifier: tags
+          url: tags/
+          weight: 30
+
+params:
+  mainSections:
+    - writeups
+
+  assets:
+    disableHLJS: true
+
+  homeInfoParams:
+    Title: My CTF Writeups
+    Content: >
+      🚩 Welcome to my CTF writeups collection!
+
+      - Here are the writeups for the CTF challenges I solved.
+
+      - I'm currently a member of team [HDFR_](https://ctftime.org/team/384849), one of the top 4 French CTF teams as of this writing.
+
+  socialIcons:
+    - name: ctftime
+      url: https://ctftime.org/user/227390
+    - name: rootme
+      url: https://www.root-me.org/Tim-679508
+
+markup:
+  highlight:
+    # anchorLineNos: true
+    codeFences: true
+    guessSyntax: true
+    lineNos: true
+    # noClasses: false
+    style: catppuccin-mocha
