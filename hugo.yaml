@@ -1,0 +1,9 @@
+# baseURL: https://example.org/
+languageCode: en-us
+title: CTF Writeups
+
+theme: ["PaperMod"]
+
+caches:
+  images:
+    dir: :cacheDir/images
