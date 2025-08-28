@@ -48,7 +48,7 @@ params:
     enabled: true
     title: Tim's CTF Writeups
     subtitle: >
-      🚩 Member of team [HDFR_](https://ctftime.org/team/384849), one of the top 4 French CTFtime teams.
+      🚩 Member of team [HDFR_](https://ctftime.org/team/384849), one of the top 3 French CTFtime teams.
 
     buttons:
       - name: Writeups

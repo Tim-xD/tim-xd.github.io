@@ -1,5 +1,5 @@
 ---
 title: Search
-placeholder: Search
+placeholder: Fuzzy Search
 layout: search
 ---
