@@ -3,7 +3,10 @@ title: SekaiBank Signature
 summary: Welcome to the Sekai Bank challenge!
 tags: [SekaiCTF, Reverse, APK]
 date: 2025-08-18
+showtoc: true
 ---
+
+# SekaiBank Signature
 
 ## Description
 

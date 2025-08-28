@@ -3,7 +3,10 @@ title: Notebook Viewer
 summary: Miku created this notebook, can you extract its secrets?
 tags: [SekaiCTF, Web, Timing Attack]
 date: 2025-08-18
+showtoc: true
 ---
+
+# Notebook Viewer
 
 ## Description
 
@@ -78,13 +81,11 @@ At this point, I had reviewed the provided files, understood how the application
 Then, I asked myself: why does the `srcFor` function include the character position when building the iframe URL? It isn't use by the iframe.
 That's when it clicked: the combination of the character position and code was used to generate a unique URL for each letter, which potentially exposed the website to a resource timing attack.
 
-### Timing Attack
-
 Let's break down how the website operates:
 - The flag is stored as a secret note.
 - For each letter, the website sends a request to a URL containing the letter's position and code, and displays the letter in an iframe.
 - Because the browser caches these requests, we can exploit this by making requests for all possible letters and observe which one is served fastest.
-- The letter that is served the quickest will be the one already cached — meaning it’s part of the flag.
+- The letter that is served the quickest will be the one already cached, meaning it’s part of the flag.
 
 To automate this process, I wrote a script that attempts all characters for a given position and reports the most probable characters, ordered by fetch time, via a webhook.
 While I could have attempted to guess multiple letters at once, I avoided this as it might have caused the flag request to become uncached due to the large volume of requests made by the script.
@@ -165,6 +166,6 @@ Using this technique, I was able to retrieve the entire flag, one letter at a ti
 SEKAI{prOc3s5_IsoLAT10n_X5l34K5_fTW}
 ```
 
-## References
+# References
 
 * Practical CTF: [Timing Attacks](https://book.jorianwoltjer.com/cryptography/timing-attacks)

