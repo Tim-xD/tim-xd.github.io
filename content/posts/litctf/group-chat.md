@@ -33,7 +33,7 @@ However, both attempts were blocked.
 
 Diving deeper into the source code revealed that SSTI was indeed possible, but there were security measures in place to prevent trivial exploitation.
 
-```py
+```python
 @app.route("/")
 def index():
     if "username" not in session:
@@ -75,7 +75,7 @@ def index():
 
 Let's analyze what stopped my initial SSTI attempts.
 
-```py
+```python
 @app.route("/send_message", methods=["POST"])
 def send_message():
     if "username" not in session:
@@ -95,7 +95,7 @@ Since SSTI delimiters (`{{` and `}}`) are non-alphanumeric, the payloads get rej
 
 Similarly, the username input is restricted:
 
-```py
+```python
 @app.route("/set_username", methods=["GET", "POST"])
 def set_username():
     if request.method == "POST":
@@ -114,7 +114,7 @@ The first username could start the SSTI expression with `{{`, and the second use
 
 To do that, we need to bypass the `: [MESSAGE]` separator between the two usernames.
 
-```py
+```python
 chat_message = username + ": " + msg
 chat_logs.append(chat_message)
 ```
@@ -127,7 +127,7 @@ ls # : [MESSAGE]
 
 To automate this, I wrote a Python script to execute arbitrary Bash commands on the vulnerable server by setting two usernames and sending a benign message:
 
-```py
+```python
 import requests
 import sys
 
@@ -221,7 +221,7 @@ The final SSTI payload (including the non-controllable characters) looks like th
 ```
 
 I adapted my previous Python script to:
-* Validate all retrictions on usernames and messages.
+* Validate all restrictions on usernames and messages.
 * Handle multiple usernames and messages to piece together the full payload.
 
 Here is the updated script:
@@ -263,7 +263,7 @@ PAYLOADS = [
     "msg" + MESSAGE_DEL,
 ]
 
-# Validate the retrictions
+# Validate the restrictions
 for i in range(len(PAYLOADS)):
     if i % 2 == 0:
         assert PAYLOADS[i].endswith(
