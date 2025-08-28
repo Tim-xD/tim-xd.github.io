@@ -94,7 +94,7 @@ module VerilogOJ
 end
 ```
 
-The application simply runs a bash script, which executes the submission and verifies that no errors occurred, and that the tests passed.
+The application simply runs a bash script, which executes the submission and verifies that no errors occurred and that the tests passed.
 
 ```sh
 cd "$1"
@@ -104,7 +104,7 @@ vvp judge
 
 I then attempted to craft Verilog code that could exploit this behavior to fetch the flag.
 At first, I assumed Verilog could be used like a typical programming language, but it turns out that Verilog is a hardware description language, not a general-purpose programming language.
-This means you can't use typical features like executing shell commands or sending HTTP requests directly.
+This means you can't use typical programming features like executing shell commands or sending HTTP requests directly.
 
 To understand Verilog better, I consulted a [Verilog tutorial](https://www.chipverify.com/tutorials/verilog), where I learned that while Verilog could still perform basic file operations, such as reading and writing files.
 
@@ -118,7 +118,7 @@ If I could modify this script, I could append the `/readflag give me the flag` c
 
 To verify this, I wrote a Verilog submission that appends a `curl` command to send a webhook request, and after submitting it, I saw my webhook receive a request, confirming that the exploit was successful.
 
-All I had to do now, was to add a subshell to retrieve the flag.
+All I had to do now was add a subshell to retrieve the flag.
 
 ```verilog
 module Crossbar_2x2_4bit(in1, in2, control, out1, out2);

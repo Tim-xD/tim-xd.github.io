@@ -14,7 +14,7 @@ Miku created this notebook, can you extract its secrets?
 
 Flag format: `SEKAI{[a-zA-Z0-9{}$@(<&!*#+_\-]+}`
 
-Difficulty: 🔶🔶🔶🔷  
+Difficulty: 🔶🔶🔶  
 Author: Qyn
 
 [Admin bot](https://ctf.sekai.team/adminbot/nbv)  
@@ -38,7 +38,7 @@ let page2 = await browser.newPage();
 await page2.goto(url);
 ```
 
-At first glance, this seems impossible because browser tabs typically can't interact with each other.
+At first glance, this seems impossible, because browser tabs typically can't interact with each other.
 However, let's explore further.
 
 The first thing I attempted was an XSS attack in the secret note with `?note=<img src=x onerror=alert('XSS') />`, but this didn't work.
@@ -78,8 +78,8 @@ else
 
 At this point, I had reviewed the provided files, understood how the application worked, found an XSS vulnerability, but still had no clear idea on how to retrieve the flag.
 
-Then, I asked myself: why does the `srcFor` function include the character position when building the iframe URL? It isn't use by the iframe.
-That's when it clicked: the combination of the character position and code was used to generate a unique URL for each letter, which potentially exposed the website to a resource timing attack.
+Then, I asked myself: why does the `srcFor` function include the character position when building the iframe URL? It isn't used by the iframe.
+That's when it clicked: the combination of the character position and code is used to generate a unique URL for each letter, which potentially exposed the website to a resource timing attack.
 
 Let's break down how the website operates:
 - The flag is stored as a secret note.
@@ -160,7 +160,7 @@ timingAttack();
 ```
 
 To execute the script, I used the XSS vulnerability I discovered earlier, embedding the link to the admin bot: `https://nbv-0-83.chals.sekai.team/?note=<img src=x onerror='[URL_ENCODED_SCRIPT]' />`.
-Using this technique, I was able to retrieve the entire flag, one letter at a time, by sending my link to the admin bot 4-5 times per letter to determine the consistently fastest letter.
+Using this technique, I was able to retrieve the entire flag, one letter at a time, by sending my link to the admin bot 4-5 times per character to determine the consistently fastest response.
 
 ```
 SEKAI{prOc3s5_IsoLAT10n_X5l34K5_fTW}

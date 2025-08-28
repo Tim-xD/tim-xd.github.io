@@ -12,7 +12,7 @@ showtoc: true
 
 Welcome to the Sekai Bank challenge!
 
-Difficulty: 🔶🔷🔷🔷  
+Difficulty: 🔶  
 Author: Marc
 
 [Given files](/sekaictf/sekaibank-signature/SekaiBank.apk)
@@ -155,7 +155,7 @@ Call<String> getFlag(@Body FlagRequest flagRequest);
 ```
 
 Here, we see that the body is a `FlagRequest` object.
-The object contains a boolean field `unmask_flag` that determines whether the flag should be exposed or masked.
+The object contains a boolean field, `unmask_flag`, that determines whether the flag should be exposed or masked.
 
 ```FlagRequest.java
 public class FlagRequest {
@@ -183,7 +183,7 @@ So the body will look like this:
 ```
 
 The next step is to obtain the signatures of the APK.
-Thankfully, Jadx-gui provides an easy way to extract this information.
+Thankfully, Jadx-GUI provides an easy way to extract this information.
 
 ```
 Signer 1
