@@ -15,7 +15,7 @@ Slipping Jimmy keeps playing with Finger.
 Difficulty: Baby  
 Author: Sagi
 
-[Given files](/litctf/group-chat/main.py)
+[Given files](/tfcctf/slippy/web-slippy.zip)
 
 ## Solution
 
