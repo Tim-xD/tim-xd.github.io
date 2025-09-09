@@ -310,5 +310,5 @@ LITCTF{c4n7_y0u_b3l13v3_us3rn4m35_c0uld_b3_1000_ch4r5_10ng_b3f0r3??}
 
 # References
 
-* Payloads All The Things: [Server Side Template Injection - Python](https://swisskyrepo.github.io/PayloadsAllTheThings/Server%20Side%20Template%20Injection/Python/#jinja2)
-* Exploit Notes: [Flask Jinja2 Pentesting](https://exploit-notes.hdks.org/exploit/web/framework/flask-jinja2/)
+- Payloads All The Things: [Server Side Template Injection - Python](https://swisskyrepo.github.io/PayloadsAllTheThings/Server%20Side%20Template%20Injection/Python/#jinja2)
+- Exploit Notes: [Flask Jinja2 Pentesting](https://exploit-notes.hdks.org/exploit/web/framework/flask-jinja2/)

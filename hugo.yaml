@@ -40,6 +40,8 @@ languages:
           weight: 30
 
 params:
+  defaultTheme: dark
+
   # https://adityatelange.github.io/hugo-PaperMod/posts/papermod/papermod-faq/#using-hugos-syntax-highlighter-chroma
   assets:
     disableHLJS: true

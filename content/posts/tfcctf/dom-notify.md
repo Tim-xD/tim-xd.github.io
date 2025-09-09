@@ -297,5 +297,5 @@ This is because DOMPurify allows `data-*` and `aria-*` attributes by default, co
 
 # References
 
-* Payloads All The Things: [DOM Clobbering](https://swisskyrepo.github.io/PayloadsAllTheThings/DOM%20Clobbering/)
-* DOMC: [Payload Generator](https://domclob.xyz/domc_payload_generator/)
+- Payloads All The Things: [DOM Clobbering](https://swisskyrepo.github.io/PayloadsAllTheThings/DOM%20Clobbering/)
+- DOMC: [Payload Generator](https://domclob.xyz/domc_payload_generator/)

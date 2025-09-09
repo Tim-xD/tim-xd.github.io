@@ -168,4 +168,4 @@ SEKAI{prOc3s5_IsoLAT10n_X5l34K5_fTW}
 
 # References
 
-* Practical CTF: [Timing Attacks](https://book.jorianwoltjer.com/cryptography/timing-attacks)
+- Practical CTF: [Timing Attacks](https://book.jorianwoltjer.com/cryptography/timing-attacks)

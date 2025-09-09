@@ -162,4 +162,4 @@ TFCCTF{3at_sl1P_h4Ck_r3p3at_5af9f1}
 
 # References
 
-* Payloads All The Things: [Zip Slip](https://swisskyrepo.github.io/PayloadsAllTheThings/Zip%20Slip/)
+- Payloads All The Things: [Zip Slip](https://swisskyrepo.github.io/PayloadsAllTheThings/Zip%20Slip/)
