@@ -310,7 +310,9 @@ fetch("http://127.0.0.1:8080/register", {
   method: "POST",
   body:
     "POST /register?: HTTP/1.1\r\n".repeat(151) +
-    "X-Username: admin\r\nX-Password: admin\r\n\r\n",
+    "X-Username: admin\r\n" +
+    "X-Password: admin\r\n" +
+    "\r\n",
   mode: "no-cors",
 });
 ```
@@ -328,7 +330,9 @@ fetch("http://127.0.0.1:8080/register", {
   body:
     "abcde" +
     "POST /register?: HTTP/1.1\r\n".repeat(151) +
-    "X-Username: admin\r\nX-Password: admin\r\n\r\n",
+    "X-Username: admin\r\n" +
+    "X-Password: admin\r\n" +
+    "\r\n",
   mode: "no-cors",
 });
 ```
